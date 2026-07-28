@@ -1,1 +1,194 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
+body{
+
+overflow:hidden;
+background:#03041c;
+font-family:Arial;
+
+}
+
+/* Sky */
+
+.sky{
+
+position:fixed;
+width:100%;
+height:100%;
+
+background:
+radial-gradient(circle at top,#1b1f55,#020311);
+
+}
+
+/* Moon */
+
+.moon{
+
+position:absolute;
+
+right:60px;
+top:50px;
+
+width:90px;
+height:90px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:0 0 40px white;
+
+}
+
+/* Stars */
+
+.stars{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(white 2px,transparent 2px),
+radial-gradient(white 1px,transparent 1px);
+
+background-size:
+
+120px 120px,
+200px 200px,
+160px 160px;
+
+animation:twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.5;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* Instruction */
+
+.instruction{
+
+position:absolute;
+
+top:25px;
+
+width:100%;
+
+text-align:center;
+
+font-size:30px;
+
+color:white;
+
+}
+
+/* Heart */
+
+#heart{
+
+position:absolute;
+
+right:120px;
+
+top:45%;
+
+}
+
+.heart{
+
+width:60px;
+height:60px;
+
+background:#ff4f8b;
+
+transform:rotate(-45deg);
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+.heart:before,
+.heart:after{
+
+content:"";
+
+position:absolute;
+
+width:60px;
+height:60px;
+
+background:#ff4f8b;
+
+border-radius:50%;
+
+}
+
+.heart:before{
+
+top:-30px;
+
+}
+
+.heart:after{
+
+left:30px;
+
+}
+
+/* Bow */
+
+#bow{
+
+position:absolute;
+
+left:40px;
+
+top:35%;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+#bow:active{
+
+transform:scale(.95);
+
+}
+
+/* Arrow */
+
+#arrow{
+
+position:absolute;
+
+left:115px;
+
+top:47%;
+
+transition:1.1s linear;
+
+}
